@@ -1,6 +1,4 @@
-:
-
-📊 Credit Card Delinquency Risk Analysis – Geldium (EDA)
+#📊 Credit Card Delinquency Risk Analysis – Geldium (EDA)
 This repository contains a complete Exploratory Data Analysis (EDA) project on credit card customer data from Geldium Finance. The goal is to identify data quality issues, missing values, and key risk factors that may contribute to credit card delinquency.
 
 🔍 Objective
@@ -9,7 +7,7 @@ Before building any predictive models, it is essential to assess and understand 
 Evaluating dataset quality
 
 Addressing missing data and outliers
-
+z
 Identifying early risk indicators of delinquency
 
 Recommending strategies for modeling and intervention
