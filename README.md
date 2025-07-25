@@ -49,7 +49,7 @@ Identified high credit utilization, missed payments, and card type as major risk
 
 Insights from GenAI
 
-Used ChatGPT to suggest imputation strategies, identify anomalies, and interpret skewness
+
 
 📌 Key Findings
 Some features had unexpected values (e.g., “Student” card at age 56)
