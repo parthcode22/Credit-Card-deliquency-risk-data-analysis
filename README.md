@@ -1,79 +1,99 @@
-# 📊 Credit Card Delinquency Risk Analysis – Geldium (EDA)
+# 📊 Credit Card Delinquency Risk Analysis – Geldium (EDA & Modeling)
 
-This repository contains a complete Exploratory Data Analysis (EDA) project on credit card customer data from Geldium Finance. The goal is to identify data quality issues, missing values, and key risk factors that may contribute to credit card delinquency.
+This repository presents an end-to-end data analysis and predictive modeling workflow for detecting delinquency risk in credit card customers, using Geldium Finance’s dataset. This project is part of a business case study conducted for Tata iQ.
 
-🔍 Objective
-Before building any predictive models, it is essential to assess and understand the dataset's structure, completeness, and integrity. This EDA supports Tata iQ and Geldium’s analytics team in:
+---
 
-Evaluating dataset quality
+## 🔍 Objective
 
-Addressing missing data and outliers
-z
-Identifying early risk indicators of delinquency
+Before deploying machine learning models for credit risk prediction, we performed an in-depth Exploratory Data Analysis (EDA) to understand:
 
-Recommending strategies for modeling and intervention
+- The quality and integrity of the dataset
+- Patterns in customer behavior
+- Early indicators of delinquency risk
+- Data-driven recommendations for modeling
 
-📁 Dataset Overview
-Rows: 500 customers
+---
 
-Features: Age, Income, Loan Balance, Credit Utilization, Payment History, Card Type, etc.
+## 📁 Dataset Overview
 
-Target Variable: Delinquent_Account (1 = Missed Payment, 0 = Paid On Time)
+- **Rows:** 500 customers
+- **Target Variable:** `Delinquent_Account` (1 = Missed Payment, 0 = Paid On Time)
+- **Key Features:** Age, Income, Credit Score, Credit Utilization, Payment History, Card Type, etc.
 
-✅ Key Tasks Completed
-Data Cleaning
+---
 
-Removed irrelevant whitespaces
+## ✅ Key Tasks Completed
 
-Checked data types and unique values
+### 🧼 Data Cleaning & Preparation
+- Removed leading/trailing whitespaces
+- Handled missing values using median imputation
+- Ensured consistent datatypes
 
-Handled missing values via median imputation
+### 📉 Missing Data Handling
+- Income and Loan Amount showed MAR-type missingness
+- No records dropped — median imputed for business continuity
 
-Missing Data Handling
+### 🚨 Outlier Detection
+- Outliers in `Income` and `Loan Balance` were identified using IQR
+- Retained with transformation to preserve data integrity
 
-Income & Loan Balance had MAR-type missingness
+### 🔍 Pattern Detection
+- Distribution plots, boxplots, and correlation heatmaps
+- High credit utilization, missed payments, and card type linked to delinquency
 
-Used imputation (median) based on domain context
+### 🧠 Risk Factor Identification (via GenAI + EDA)
+- Top risk features:
+  - Credit Score
+  - Missed Payment Count
+  - Credit Utilization Ratio
+  - Debt-to-Income Ratio
+  - Card Type
 
-Outlier Detection
+---
 
-Detected and transformed extreme Income values using IQR
+## 📊 Predictive Modeling Plan
 
-Avoided deletion to preserve sample size
+A conceptual ML pipeline was built using GenAI guidance, resulting in the following structure:
 
-Pattern Detection & Risk Factors
+- Applied **SMOTE** to balance imbalanced target classes
+- Compared multiple classifiers: Logistic Regression, Decision Tree, XGBoost, Neural Networks
+- Final model chosen: **XGBoost Classifier** (Best Accuracy: 83%)
 
-Used distribution plots, boxplots, and correlation matrix
+📌 Full model logic, performance metrics, and ethical AI considerations are documented in the [Predictive Modeling Report](./Geldium_Predictive_Model_Report.pdf).
 
-Identified high credit utilization, missed payments, and card type as major risk indicators
+---
 
-Insights from GenAI
+## 📌 Key Insights
 
+- Some anomalies exist (e.g., Student card for age 56)
+- High credit utilization and missed payments are critical red flags
+- Class imbalance significantly impacts predictive power
+- Transparent, fair, and explainable models are essential in financial AI systems
 
+---
 
-📌 Key Findings
-Some features had unexpected values (e.g., “Student” card at age 56)
+## 📎 Deliverables
 
-High credit utilization and missed payments are strongly associated with delinquency
+- [EDA Report (Notebook)](./EDA_Notebook.ipynb)
+- [Model Planning Report (PDF)](./Geldium_Predictive_Model_Report.pdf)
+- Visualizations: Countplots, Boxplots, Heatmaps, Feature Importance
+- SMOTE implementation, Confusion Matrix, and AUC-F1 Score comparisons
 
-Right-skewed income distribution with significant outliers
+---
 
-Dataset suitable for modeling after preprocessing
+## 🚀 Next Steps
 
-📎 Deliverables
-EDA Summary Report (Word format)
+- Deploy model with real-time data pipelines
+- Integrate fairness audits (e.g., via AIF360)
+- Build a dashboard to monitor key risk indicators
+- Extend to multi-class classification (e.g., Low/Medium/High Risk)
 
-Jupyter/Colab notebook with all analysis steps
+---
 
-Visualizations (distribution plots, heatmaps, boxplots)
+## 🙌 Acknowledgments
 
-🚀 Next Steps
-Apply classification models (e.g., Logistic Regression, Random Forest)
+This project was built with the support of **GenAI tools** (ChatGPT & Google Gemini) as part of a learning challenge by **Tata iQ and Geldium Finance**.  
+Special thanks to the AI mentors and domain experts who helped shape this project.
 
-Address class imbalance using SMOTE or other techniques
-
-Build a dashboard to track delinquency risk indicators
-
-🙌 Acknowledgments
-This project was conducted as part of a hands-on analytics exercise for Tata iQ and Geldium Finance, with guidance from GenAI.
-
+---
