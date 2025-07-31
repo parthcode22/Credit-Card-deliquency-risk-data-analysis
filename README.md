@@ -4,7 +4,7 @@ This repository presents an end-to-end data analysis and predictive modeling wor
 
 ---
 
-## 🔍 Objective
+# 🔍 Objective
 
 Before deploying machine learning models for credit risk prediction, we performed an in-depth Exploratory Data Analysis (EDA) to understand:
 
