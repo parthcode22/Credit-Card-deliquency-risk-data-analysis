@@ -60,9 +60,10 @@ A conceptual ML pipeline was built using GenAI guidance, resulting in the follow
 - Compared multiple classifiers: Logistic Regression, Decision Tree, XGBoost, Neural Networks
 - Final model chosen: **XGBoost Classifier** (Best Accuracy: 83%)
 
-📌 Full model logic, performance metrics, and ethical AI considerations are documented in the [Predictive Modeling Report](./Geldium_Predictive_Model_Report.pdf).
+## 📄 Documentation
 
----
+- 📘 [EDA Report – Geldium Delinquency](./EDA_Report_Geldium_Delinquency.docx)
+
 
 ## 📌 Key Insights
 
