@@ -75,9 +75,6 @@ A conceptual ML pipeline was built using GenAI guidance, resulting in the follow
 ---
 
 ## 📎 Deliverables
-
-- [EDA Report (Notebook)](./EDA_Notebook.ipynb)
-- [Model Planning Report (PDF)](./Geldium_Predictive_Model_Report.pdf)
 - Visualizations: Countplots, Boxplots, Heatmaps, Feature Importance
 - SMOTE implementation, Confusion Matrix, and AUC-F1 Score comparisons
 
