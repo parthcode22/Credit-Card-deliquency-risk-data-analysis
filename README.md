@@ -64,6 +64,7 @@ A conceptual ML pipeline was built using GenAI guidance, resulting in the follow
 
 - 📘 [EDA Report – Geldium Delinquency](./EDA_Report_Geldium_Delinquency.docx)
 - 📘 [Predictive Modeling Report – Geldium](https://github.com/parthcode22/Credit-Card-deliquency-risk-data-analysis/blob/master/Geldium_Predictive_Model_Report.docx)
+- 📘 [Business Summary Report – Geldium](https://github.com/parthcode22/Credit-Card-deliquency-risk-data-analysis/blob/master/Geldium_Business_Summary_Report.docx)
 
 
 ## 📌 Key Insights
